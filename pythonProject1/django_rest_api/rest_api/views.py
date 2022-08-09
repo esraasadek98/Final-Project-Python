@@ -263,11 +263,11 @@ def cartItem_detect_same_product(request,cartId,productId):
         return JsonResponse(serializer.data, safe=False)
 
 
-class search_product(generics.ListAPIView):
-    search_fields = ('title', 'description', 'category')
-    filter_backends = (filter.SearchFilter)
-    queryset = Product.objects.all()
-    serializer_class= ProductSerializer
+# class search_product(generics.ListAPIView):
+#     search_fields = ('title', 'description', 'category')
+#     filter_backends = (filter.SearchFilter)
+#     queryset = Product.objects.all()
+#     serializer_class= ProductSerializer
 
 
 @csrf_exempt
