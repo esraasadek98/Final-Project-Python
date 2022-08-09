@@ -312,7 +312,7 @@ def delete_file(request):
 @csrf_exempt
 def filter_range_price(request,minprice,maxprice):
     try:
-        products =Product.objects.filter(price__range(minprice,maxprice))
+        products =Product.objects.filter(price__range=(minprice,maxprice))
     except:
         return HttpResponse(status=404)
 
@@ -371,7 +371,7 @@ def filter_condition(request,condition):
 
 def filter_price_and_rating(request,minprice,maxprice,rating):
     try:
-        products =Product.objects.filter(price_range(minprice,maxprice)).filter(rating_gte=rating)
+        products =Product.objects.filter(price_range=(minprice,maxprice)).filter(rating_gte=rating)
     except:
         return HttpResponse(status=404)
 
@@ -382,7 +382,7 @@ def filter_price_and_rating(request,minprice,maxprice,rating):
 
 def filter_price_and_condition(request,minprice,maxprice,condition):
     try:
-        products =Product.objects.filter(price_range(minprice,maxprice)).filter(condition=condition)
+        products =Product.objects.filter(price_range=(minprice,maxprice)).filter(condition=condition)
     except:
         return HttpResponse(status=404)
 
@@ -404,7 +404,7 @@ def filter_rating_and_condition(request,rating,condition):
 
 def filter_all(request,minprice,maxprice,rating,condition):
     try:
-        products =Product.objects.filter(price_range(minprice,maxprice)).filter(rating_gte=rating).filter(condition=condition)
+        products =Product.objects.filter(price_range=(minprice,maxprice)).filter(rating_gte=rating).filter(condition=condition)
     except:
         return HttpResponse(status=404)
 
@@ -414,9 +414,9 @@ def filter_all(request,minprice,maxprice,rating,condition):
 
 
 
-def get_cart_item_by_id(request,cardId):
+def get_cart_item_by_id(request,cartId):
     try:
-        cartItem =CartItem.objects.filter(cardId=cardId).prefetch_related('productId').order_by('create_at')
+        cartItem =CartItem.objects.filter(cartId=cartId).prefetch_related('productId').order_by('create_at')
     except:
         return HttpResponse(status=404)
 
