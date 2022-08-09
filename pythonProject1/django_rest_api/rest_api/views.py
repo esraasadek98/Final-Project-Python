@@ -265,7 +265,7 @@ def cartItem_detect_same_product(request,cartId,productId):
 
 class search_product(generics.ListAPIView):
     search_fields = ('title', 'description', 'category')
-    filter_backends = (filter.SearchFilter)
+    filter_backends = (filters.SearchFilter)
     queryset = Product.objects.all()
     serializer_class= ProductSerializer
 
