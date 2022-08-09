@@ -17,7 +17,7 @@ urlpatterns = [
     path('cartItem/', cart_item_list),
     path('cartItem/<int:cartId>/', cartItem_by_cart_id),
     path('cartItem/id/<int:pk>/', cartItem_by_id),
-    path('cartItemDeleteSameItem/<int:cartId>/<int:productId>/', cartItem_detect_same_product),
+    path('cartItemDetectSameItem/<int:cartId>/<int:productId>/', cartItem_detect_same_product),
     path('productImg/', productImg_list),
     path('productImg/<int:productId>/', productImg_product_Id),
     path('productImg/id/<int:id>/', productImg_by_Id),
