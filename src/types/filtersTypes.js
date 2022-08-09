@@ -1,7 +1,0 @@
-export const FILTER_PRICE               = " FILTER_PRICE "
-export const FILTER_RATING              = "FILTER_RATING  "
-export const FILTER_CONDITION           = "FILTER_CONDITION "
-export const FILTER_PRICE_AND_RATING    = "FILTER_PRICE_AND_RATING  "
-export const FILTER_PRICE_AND_CONDITION = "FILTER_PRICE_AND_CONDITION"
-export const FILTER_RATING_AND_CONDITION = "FILTER_RATING_AND_CONDITION"
-export const FILTER_ALL                 = " FILTER_ALL    "
