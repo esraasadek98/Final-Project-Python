@@ -30,7 +30,7 @@ urlpatterns = [
     path('filter/rating/<int:rating>/', filter_rating),
     path('filter/condition/<str:condition>/', filter_condition),
     path('filter/price_and_rating/<int:minprice>/<int:maxprice>/<int:rating>/', filter_price_and_rating),
-    path('filter/price_and_condition/<int:minprice>/<int:maxprice>/<str:condition>/', filter_price_and_condition()),
+    path('filter/price_and_condition/<int:minprice>/<int:maxprice>/<str:condition>/', filter_price_and_condition),
     path('filter/rating_and_condition/<int:rating>/<str:condition>/', filter_rating_and_condition),
     path('filter/<int:minprice>/<int:maxprice>/<int:rating>/<str:condition>/', filter_all),
 ]
