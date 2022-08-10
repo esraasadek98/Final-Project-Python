@@ -96,7 +96,7 @@ export const login =(email,password)=>async (dispatch)=>{
 export const logout =()=>async (dispatch)=>{
     
        dispatch({
-           type:LOGIN_SUCCESS,
+           type:LOGOUT_SUCCESS,
            msg:err.response.data
        })
 
