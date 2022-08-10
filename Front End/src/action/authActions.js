@@ -9,7 +9,7 @@ import{
     REGISTER_FAIL   
 } from '../types/auyhTypes'
 
-import axios from "axiox";
+import axios from "axios";
 
 export const loadUser =()=> async (dispatch)=>{
     dispatch({type , USER_LOADING});
